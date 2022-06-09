@@ -75,7 +75,7 @@ fieldset {
 
 </style>
 <div class="topnav">
-  <a class="active" href="home.jsp">Home</a>
+  <a class="active" href="index.jsp">Home</a>
   <a href="login.jsp">Login</a>
   <a href="carrentanddetails.jsp">Car Rent And Details</a>
   <a href="#Payment">Payment</a>
