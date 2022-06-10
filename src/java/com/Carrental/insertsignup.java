@@ -3,14 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.Carrental;
-
 /**
  *
  * @author Aspire E 14
  */
-
-
-
 public class insertsignup {
     public String NAME;
     public String NICKNAME;
@@ -76,7 +72,4 @@ public class insertsignup {
     public void setGENDER(String GENDER) {
         this.GENDER = GENDER;
     }
-    
-    
 }
-
