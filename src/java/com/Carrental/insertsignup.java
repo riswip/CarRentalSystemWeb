@@ -14,7 +14,6 @@ package com.Carrental;
 public class insertsignup {
     public String NAME;
     public String NICKNAME;
-    public String ICNO;
     public String AGE;
     public String EMAIL;
     public String PHONENO;
@@ -37,13 +36,6 @@ public class insertsignup {
         this.NICKNAME = NICKNAME;
     }
 
-    public String getICNO() {
-        return ICNO;
-    }
-
-    public void setICNO(String ICNO) {
-        this.ICNO = ICNO;
-    }
 
     public String getAGE() {
         return AGE;

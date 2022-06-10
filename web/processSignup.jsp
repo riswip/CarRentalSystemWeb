@@ -25,29 +25,27 @@
             String myURL = "jdbc:mysql://localhost:3306/carrental";
             Connection myConnection = DriverManager.getConnection(myURL, "root", "admin");
             
-            String sInsertQry = "INSERT INTO signup(NAME, NICKNAME, ICNO, AGE, EMAIL, PHONENO, PASSWORRD, GENDER) VALUES(?,?,?,?,?,?,?,?)";
+            String sInsertQry = "INSERT INTO signup(NAME, NICKNAME, AGE, EMAIL, PHONENO, PASSWORRD, GENDER) VALUES(?,?,?,?,?,?,?,)";
             
             PreparedStatement myPS = myConnection.prepareStatement(sInsertQry);
                     
             myPS.setString(1, myAuthor.getNAME());
             myPS.setString(2, myAuthor.getNICKNAME());
-            myPS.setString(3, myAuthor.getICNO());
-            myPS.setString(4, myAuthor.getAGE());
-            myPS.setString(5, myAuthor.getEMAIL());
-            myPS.setString(6, myAuthor.getPHONENO());
-            myPS.setString(7, myAuthor.getPASSWORRD());
-            myPS.setString(8, myAuthor.getGENDER());
+            myPS.setString(3, myAuthor.getAGE());
+            myPS.setString(4, myAuthor.getEMAIL());
+            myPS.setString(5, myAuthor.getPHONENO());
+            myPS.setString(6, myAuthor.getPASSWORRD());
+            myPS.setString(7, myAuthor.getGENDER());
             
 
             result = myPS.executeUpdate();
             
             if(result > 0){
                 out.println("\tRecord successfully added into Signup table...!");
-                out.print("<p>"+"Record with signup name " + myAuthor.getNAME()
+                out.print("<p>"+"Record with signup NAME " + myAuthor.getNAME()
                         + " successfully created..!"+"</p>");
                 out.println("<p>"+"Details of record area; " + "</p>");
-                out.println("<p>nickname : "+ myAuthor.getNICKNAME() + "</p>");
-                out.println("ICNO : "+ myAuthor.getICNO() + "</p>");
+                out.println("<p>NICKNAME : "+ myAuthor.getNICKNAME() + "</p>");
                 out.println("<p>AGE: "+ myAuthor.getAGE() + "</p>");
                 out.println("<p>EMAIL : "+ myAuthor.getEMAIL() + "</p>");
                 out.println("<p>PHONENO : "+ myAuthor.getPHONENO() + "</p>");

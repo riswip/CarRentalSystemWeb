@@ -86,10 +86,7 @@ form group {
                 <input type="text" id="name" name="NAME"size="60" placeholder="Enter your name"><br><br/>
  
                  <label for="name">Nick Name :</label>
-                <input type="text" id="nickname" name="NICKNAME"size="60" placeholder="Enter your nick name"><br><br/>
-                
-                <label for="icno">IC No :</label>
-                <input type="text" id="icno" name="ICNO" size="40" maxlength="15" placeholder="E.g.: 901020-05-1234"><br><br/>               
+                <input type="text" id="nickname" name="NICKNAME"size="60" placeholder="Enter your nick name"><br><br/>              
 
                 <label for="icno">Age :</label>
                 <input type="text" id="age" name="AGE" size="10" maxlength="3" placeholder="000"><br><br/>  
