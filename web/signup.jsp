@@ -63,7 +63,7 @@ button {
   background-color: black;
   font: Arial;
 }
-fieldset {
+form group {
   background-color: tan;
    border: 10px solid rgb(255,232,57);
   width: 700px;
@@ -80,27 +80,28 @@ fieldset {
   <a href="payment.jsp">Payment</a>
 </div>
 <div>
-             <fieldset>
+    <form action="processSignup.jsp" method="post">
+    <div class="form group">
                  <label for="name">Name :</label>
-                <input type="text" id="name" name="name"size="60" placeholder="Enter your name"><br><br/>
+                <input type="text" id="name" name="NAME"size="60" placeholder="Enter your name"><br><br/>
  
                  <label for="name">Nick Name :</label>
-                <input type="text" id="nickname" name="nickname"size="60" placeholder="Enter your nick name"><br><br/>
+                <input type="text" id="nickname" name="NICKNAME"size="60" placeholder="Enter your nick name"><br><br/>
                 
                 <label for="icno">IC No :</label>
-                <input type="text" id="icno" name="icno" size="40" maxlength="15" placeholder="E.g.: 901020-05-1234"><br><br/>               
+                <input type="text" id="icno" name="ICNO" size="40" maxlength="15" placeholder="E.g.: 901020-05-1234"><br><br/>               
 
                 <label for="icno">Age :</label>
-                <input type="text" id="age" name="age" size="10" maxlength="3" placeholder="000"><br><br/>  
+                <input type="text" id="age" name="AGE" size="10" maxlength="3" placeholder="000"><br><br/>  
                 
                 <label for="email">E-mail :</label>
-                <input type="text" id="email" name="email"size="60" placeholder="Enter your email"><br><br/>
+                <input type="text" id="email" name="EMAIL"size="60" placeholder="Enter your email"><br><br/>
                 
                 <label for="phoneno">Phone No :</label>
-                <input type="text" id="phoneno" name="phoneno" size="40" placeholder="E.g.: 011-12334455"><br><br/> 
+                <input type="text" id="phoneno" name="PHONENO" size="40" placeholder="E.g.: 011-12334455"><br><br/> 
                 
                 <label for="password">Password :</label>    
-                <input type="password"  size="40" id="Password" placeholder="**********"><br><br/>
+                <input type="password"  size="40" id="PASSWORRD" placeholder="**********"><br><br/>
                 <input type="checkbox" onclick="myFunction()">Show Password <br><br/>
               
                 <script>
@@ -121,11 +122,9 @@ function myFunction() {
                             </select>  <br><br/>  
                  </fieldset>
             </div>
-   <button type="button">Submit</button>
-                <button type="button">Cancel</button>
-        
-              
 
-       
+   <input type="Submit">
+                <input type="reset">
+    </form>
     </body>
 </html>

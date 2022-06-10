@@ -113,7 +113,7 @@ public final class carrentanddetails_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("\n");
       out.write("</style>\n");
       out.write("<div class=\"topnav\">\n");
-      out.write("  <a class=\"active\" href=\"home.jsp\">Home</a>\n");
+      out.write("  <a class=\"active\" href=\"index.jsp\">Home</a>\n");
       out.write("  <a href=\"login.jsp\">Login</a>\n");
       out.write("  <a href=\"#carrentanddetails\">Car Rent And Details</a>\n");
       out.write("  <a href=\"payment.jsp\">Payment</a>\n");

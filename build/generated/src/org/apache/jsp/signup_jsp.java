@@ -102,7 +102,7 @@ public final class signup_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  background-color: black;\n");
       out.write("  font: Arial;\n");
       out.write("}\n");
-      out.write("fieldset {\n");
+      out.write("form group {\n");
       out.write("  background-color: tan;\n");
       out.write("   border: 10px solid rgb(255,232,57);\n");
       out.write("  width: 700px;\n");
@@ -113,13 +113,14 @@ public final class signup_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("</style>\n");
       out.write("<div class=\"topnav\">\n");
-      out.write("  <a class=\"active\" href=\"home.jsp\">Home</a>\n");
+      out.write("  <a class=\"active\" href=\"index.jsp\">Home</a>\n");
       out.write("  <a href=\"login.jsp\">Login</a>\n");
       out.write("  <a href=\"carrentanddetails.jsp\">Car Rent And Details</a>\n");
       out.write("  <a href=\"payment.jsp\">Payment</a>\n");
       out.write("</div>\n");
       out.write("<div>\n");
-      out.write("             <fieldset>\n");
+      out.write("    <form action=\"processSignup.jsp\" method=\"post\">\n");
+      out.write("    <div class=\"form group\">\n");
       out.write("                 <label for=\"name\">Name :</label>\n");
       out.write("                <input type=\"text\" id=\"name\" name=\"name\"size=\"60\" placeholder=\"Enter your name\"><br><br/>\n");
       out.write(" \n");
@@ -160,12 +161,10 @@ public final class signup_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            </select>  <br><br/>  \n");
       out.write("                 </fieldset>\n");
       out.write("            </div>\n");
-      out.write("   <button type=\"button\">Submit</button>\n");
-      out.write("                <button type=\"button\">Cancel</button>\n");
-      out.write("        \n");
-      out.write("              \n");
       out.write("\n");
-      out.write("       \n");
+      out.write("   <input type=\"Submit\">\n");
+      out.write("                <input type=\"reset\">\n");
+      out.write("    </form>\n");
       out.write("    </body>\n");
       out.write("</html>");
     } catch (Throwable t) {
