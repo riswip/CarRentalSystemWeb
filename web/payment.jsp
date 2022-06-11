@@ -11,76 +11,65 @@
         <title>PAYMENT</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("https://www.rentacarkerala.in/wp-content/uploads/2018/10/best.jpg");
+            background-size: 100%;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #040405;
+        }
+        .topnav a {
+            float: left;
+            color: #ED8BF9;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            background-color: #ED8BF9;
+            color: black;
+        }
+        .topnav a.active {
+            background-color: #F74211;
+            color: white;
+        }
+        div {
+            text-align: justify-all;
+        }
+        button {
+            border: 2px solid #AD078A;
+            color: palegoldenrod;
+            padding: 20px 40px;
+            text-align: center;
+            text-decoration: pink;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px 10px;
+            cursor: pointer;
+            background-color: black;
+            font: Arial;
+        }
+        fieldset {
+            background-color: tan;
+            border: 10px solid rgb(255,232,57);
+            width: 700px;
+            float: start;
+        }
+        </style>
     </head>
     <body>
-        
-  
-            <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("https://www.rentacarkerala.in/wp-content/uploads/2018/10/best.jpg");
-  background-size: 100%;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #040405;
-}
-
-.topnav a {
-  float: left;
-  color: #ED8BF9;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ED8BF9;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #F74211;
-  color: white;
-}
-
-div {
-    text-align: justify-all;
-    
-}
-button {
-  border: 2px solid #AD078A;
-  color: palegoldenrod;
-  padding: 20px 40px;
-  text-align: center;
-  text-decoration: pink;
-  display: inline-block;
-  font-size: 20px;
-  margin: 10px 10px;
-  cursor: pointer;
-  background-color: black;
-  font: Arial;
-}
-fieldset {
-  background-color: tan;
-   border: 10px solid rgb(255,232,57);
-  width: 700px;
-  float: start;
-  
-}
-
-
-</style>
-<div class="topnav">
-  <a class="active" href="index.jsp">Home</a>
-  <a href="login.jsp">Login</a>
-  <a href="carrentanddetails.jsp">Car Rent And Details</a>
-  <a href="#Payment">Payment</a>
-</div>
-
+        <!-- TOP NAVIGATION -->
+        <div class="topnav">
+          <a class="active" href="index.jsp">Home</a>
+          <a href="login.jsp">Login</a>
+          <a href="carrentanddetails.jsp">Car Rent And Details</a>
+          <a href="#Payment">Payment</a>
+        </div>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -226,13 +215,13 @@ fieldset {
                         <option value="Male"> November </option>
                         <option value="Female"> December </option>
                     </select>
-                </div>     
+                    </div>     
+                </div>
             </div>
         </div>
-        </div>
 
-        <input type="submit" value="Continue for the receipt" class="btn">
-              </form>
+                <input type="submit" value="Continue for the receipt" class="btn">
+                </form>
             </div>
           </div>
 
