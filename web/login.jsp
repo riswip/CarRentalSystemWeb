@@ -70,7 +70,7 @@
         </div>
         <div>
             <fieldset>
-                <form action="" method="POST">
+                <form action="loginProcess.jsp" method="POST">
                     <div class="">
                         <label for="name">Nick Name :</label>
                         <input type="text" id="nickname" name="nickname" size="60" placeholder="Enter your nick name" required>
