@@ -69,34 +69,36 @@
             <a href="payment.jsp">Payment</a>
         </div>
         <div>
-            <fieldset>
-                <form action="loginProcess.jsp" method="POST">
+            
+             <div class="form group">
+                <form action="processlogin.jsp" method="post">
+                
                     <div class="">
                         <label for="name">Nick Name :</label>
-                        <input type="text" id="nickname" name="nickname" size="60" placeholder="Enter your nick name" required>
+                    <input type="text" id="nickname" name="NICKNAME"size="60" placeholder="Enter your nick name"><br><br/>  
                     </div>
                     <div class="">
-                        <label for="password">Password :</label>
-                        <input type="password"  size="40" id="Password" placeholder="**********" required><br>
-                        <input type="checkbox" onclick="myFunction()">Show Password
+                        <label for="password">Password :</label>    
+                    <input type="password"  size="40" id="PASSWORRD" placeholder="**********"><br><br/>
+                    <input type="checkbox" onclick="myFunction()">Show Password <br><br/>
                     </div>
                     <div class="">
-                        <button type="button">Login</button>
-                        <button type="button">Cancel</button>
+                        <button> <input type="Submit"></button>
+                    <button> <input type="reset"></button>
                     </div>
                 </form>
-            </fieldset>
-        </div>
+
+             </div></div>
         
         <!-- JavaScript -->
         <script>
         function myFunction() {
-            var x = document.getElementById("Password");
-            if (x.type === "password") {
+            var x = document.getElementById("PASSWORRD");
+            if (x.type === "PASSWORRD") {
                 x.type = "text";
             } 
             else {
-                x.type = "password";
+                x.type = "PASSWORRD";
             }
         }
         </script>

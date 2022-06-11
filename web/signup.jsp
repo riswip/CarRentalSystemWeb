@@ -98,8 +98,8 @@
                         <option value="Female">Female </option>
                     </select> <br><br/>
                     
-                    <input type="Submit">
-                    <input type="reset">
+                    <button> <input type="Submit"></button>
+                    <button> <input type="reset"></button>
                 </form>
             </div>
             
