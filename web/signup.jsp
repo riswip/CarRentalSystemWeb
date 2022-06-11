@@ -102,6 +102,8 @@
                     <input type="reset">
                 </form>
             </div>
+            
+        <!-- JavaScript -->
         <script>
             function myFunction() {
                 var x = document.getElementById("Password");
