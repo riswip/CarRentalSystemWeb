@@ -54,8 +54,8 @@
             font: Arial;
         }
         fieldset {
-            background-color: tan;
-            border: 10px solid rgb(255,232,57);
+            background-color: gray;
+            border: 10px solid ;
             width: 700px;
             float: start;
         }
@@ -72,45 +72,50 @@
         
         <!-- CONTENT -->
         <fieldset>
+        <div class="form group">
+                <form action="book.jsp" method="post">
             <p><strong>PERODUA MYVI</strong></p>
             <p>
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/2013_Perodua_Myvi_1.3_SE_%28S-Series%29_in_Cyberjaya%2C_Malaysia_%2803%29.jpg" alt="PERODUA MYVI" style="float:left;width:400px;height:300px;">
             Car Type : Perodua Myvi AUTO <br><br/>
             Car Number Plate : ABC1234 <br><br/>
-            Charge Per/Hour : RM70/1 hour <br><br/>
-            Capacity : 5 person <br><br/>
+            Charge Per/Hour : RM7/1 hour <br><br/>
+            Capacity : 4 person <br><br/>
             Status : Available until 2300 hours <br><br/>
-            <button type="button">Book</button>
+            <button <input type="Submit">BOOK NOW</button></form></div></fieldset>
             </p>
-        </fieldset>
-
-        <fieldset>
+       
+            <fieldset>
+        <div class="form group">
+                <form action="book.jsp" method="post">
             <p><strong>PERODUA VIVA</strong></p>
             <p>
             <img src="https://lepaskunci.com.my/storage/vehicle/1276/file_1640189179_61c34cfb15d5c.jpg" alt="PERODUA VIVA" style="float:left;width:400px;height:300px;">
             Car Type : Perodua Viva AUTO <br><br/>
             Car Number Plate : BCD7890 <br><br/>
-            Charge Per/Hour : RM6/1 hour <br><br/>
+            Charge Per/Hour : RM7/1 hour <br><br/>
             Capacity : 4 person <br><br/>
             Status : Available until 2300 hours <br><br/>
-            <button type="button">Book</button>
+            <button <input type="Submit">BOOK NOW</button></form></div></fieldset>
             </p>
-        </fieldset>
-
-        <fieldset>
+       
+            <fieldset>
+            <div class="form group">
+                <form action="book.jsp" method="post">
             <p><strong>PERODUA AXIA</strong></p>
             <p>
             <img src="https://paultan.org/image/2019/09/Perodua_Axia_FL_GXtra__GearUp_Malaysia-2-BM.jpg" alt="PERODUA AXIA" style="float:left;width:400px;height:300px;">
             Car Type : Perodua Axia AUTO <br><br/>
             Car Number Plate : TBG 8008 <br><br/>
-            Charge Per/Hour : RM6/1 hour <br><br/>
-            Capacity : 7-8 person <br><br/>
+            Charge Per/Hour : RM7/1 hour <br><br/>
+            Capacity : 4 person <br><br/>
             Status : Available until 2300 hours <br><br/>
-            <button type="button">Book</button>
+            <button <input type="Submit">BOOK NOW</button></form></div></fieldset>
             </p>
-        </fieldset>
-
-        <fieldset>
+       
+            <fieldset>
+            <div class="form group">
+                <form action="book.jsp" method="post">
             <p><strong>PROTON SAGA ISWARA </strong></p>
             <p>
             <img src="https://fichasmotor.com/images/proton/proton-saga-iswara-1-5i-90-cv.webp" alt="PROTON SAGA ISWARA" style="float:left;width:400px;height:300px;">
@@ -119,21 +124,12 @@
             Charge Per/Hour : RM7/1 hour <br><br/>
             Capacity : 5 person <br><br/>
             Status : Available until 2300 hours <br><br/>
-            <button type="button">Book</button>
+            <button <input type="Submit">BOOK NOW</button></form></div></fieldset>
             </p>
-        </fieldset>
+    
 
-        <fieldset>
-            <p><strong>MPV PROTON EXORA BOLD</strong></p>
-            <p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Proton_Exora_Bold_%28front%29_in_Kuala_Lumpur%2C_Malaysia.JPG" alt="MPV PROTON EXORA BOLD" style="float:left;width:400px;height:300px;">
-            Car Type : MPV Proton Exora Bold AUTO <br><br/>
-            Car Number Plate : CDE 1111 <br><br/>
-            Charge Per/Hour : RM10/1 hour <br><br/>
-            Capacity : 7-8 person <br><br/>
-            Status : Available until 2300 hours <br><br/>
-            <button type="button">Book</button>
-            </p>
-        </fieldset>
+            
+            
+                
     </body>
 </html>

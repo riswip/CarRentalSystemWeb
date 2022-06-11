@@ -78,10 +78,10 @@
                     <input type="text" id="nickname" name="NICKNAME"size="60" placeholder="Enter your nick name"><br><br/>  
                     </div>
                     <div class="">
-                        <label for="password">Password :</label>    
+                         <label for="password">Password :</label>    
                     <input type="password"  size="40" id="PASSWORRD" placeholder="**********"><br><br/>
                     <input type="checkbox" onclick="myFunction()">Show Password <br><br/>
-                    </div>
+
                     <div class="">
                         <button> <input type="Submit"></button>
                     <button> <input type="reset"></button>
