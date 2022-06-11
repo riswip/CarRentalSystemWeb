@@ -27,7 +27,9 @@
     <p>Nickname: <%= rs.getString(2) %> </p>
     <p>Age: <%= rs.getString(3) %> </p>
     <p>Email: <%= rs.getString(4) %> </p>
-    <p>Gender: <%= rs.getString(7) %> </p>
+    <p>Gender: <%= rs.getString(7) %> </p><br>
+    
+    <p><a href="logout.jsp">Logout</a></p>
     
     <%  } %>
   </body>
