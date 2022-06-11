@@ -71,7 +71,7 @@
         <div>
             
              <div class="form group">
-                <form action="processlogin.jsp" method="post">
+                <form action="userAccount.jsp" method="post">
                 
                     <div class="">
                         <label for="name">Nick Name :</label>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="">
                          <label for="password">Password :</label>    
-                    <input type="password"  size="40" id="PASSWORRD" placeholder="**********"><br><br/>
+                    <input type="password" name="PASSWORRD" size="40" id="PASSWORRD" placeholder="**********"><br><br/>
                     <input type="checkbox" onclick="myFunction()">Show Password <br><br/>
 
                     <div class="">

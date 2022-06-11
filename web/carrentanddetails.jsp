@@ -73,7 +73,7 @@
         <!-- CONTENT -->
         <fieldset>
         <div class="form group">
-                <form action="book.jsp" method="post">
+                <form action="bookmyvi.jsp" method="post">
             <p><strong>PERODUA MYVI</strong></p>
             <p>
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/2013_Perodua_Myvi_1.3_SE_%28S-Series%29_in_Cyberjaya%2C_Malaysia_%2803%29.jpg" alt="PERODUA MYVI" style="float:left;width:400px;height:300px;">
@@ -87,7 +87,7 @@
        
             <fieldset>
         <div class="form group">
-                <form action="book.jsp" method="post">
+                <form action="bookviva.jsp" method="post">
             <p><strong>PERODUA VIVA</strong></p>
             <p>
             <img src="https://lepaskunci.com.my/storage/vehicle/1276/file_1640189179_61c34cfb15d5c.jpg" alt="PERODUA VIVA" style="float:left;width:400px;height:300px;">
@@ -101,7 +101,7 @@
        
             <fieldset>
             <div class="form group">
-                <form action="book.jsp" method="post">
+                <form action="bookaxia.jsp" method="post">
             <p><strong>PERODUA AXIA</strong></p>
             <p>
             <img src="https://paultan.org/image/2019/09/Perodua_Axia_FL_GXtra__GearUp_Malaysia-2-BM.jpg" alt="PERODUA AXIA" style="float:left;width:400px;height:300px;">
@@ -115,7 +115,7 @@
        
             <fieldset>
             <div class="form group">
-                <form action="book.jsp" method="post">
+                <form action="booksaga.jsp" method="post">
             <p><strong>PROTON SAGA ISWARA </strong></p>
             <p>
             <img src="https://fichasmotor.com/images/proton/proton-saga-iswara-1-5i-90-cv.webp" alt="PROTON SAGA ISWARA" style="float:left;width:400px;height:300px;">
