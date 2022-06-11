@@ -13,7 +13,7 @@
       String myURL = "jdbc:mysql://localhost:3306/carrental";
       Connection myConnection = DriverManager.getConnection(myURL, "root", "admin");
       
-      String sql = "SELECT * FROM signup WHERE NICKNAME='" + userNickname + "'";
+      String sql = "SELECT * FROM signup WHERE NICKNAME='" + userNickname + "' AND PASSWORD='" + userPass + "'";
       Statement stmt = myConnection.createStatement(sql);
       ResultSet rs = stmt.executeQuery(sql);
       
