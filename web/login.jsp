@@ -70,16 +70,22 @@
         </div>
         <div>
             <fieldset>
-                <label for="name">Nick Name :</label>
-                <input type="text" id="nickname" name="nickname"size="60" placeholder="Enter your nick name"><br><br/>
- 
-                <label for="password">Password :</label>    
-                <input type="password"  size="40" id="Password" placeholder="**********"><br><br/>
-                <input type="checkbox" onclick="myFunction()">Show Password <br><br/>
+                <form action="" method="POST">
+                    <div class="">
+                        <label for="name">Nick Name :</label>
+                        <input type="text" id="nickname" name="nickname" size="60" placeholder="Enter your nick name" required>
+                    </div>
+                    <div class="">
+                        <label for="password">Password :</label>
+                        <input type="password"  size="40" id="Password" placeholder="**********" required><br>
+                        <input type="checkbox" onclick="myFunction()">Show Password
+                    </div>
+                    <div class="">
+                        <button type="button">Login</button>
+                        <button type="button">Cancel</button>
+                    </div>
+                </form>
             </fieldset>
-            
-            <button type="button">Login</button>
-            <button type="button">Cancel</button>
         </div>
         
         <!-- JavaScript -->
