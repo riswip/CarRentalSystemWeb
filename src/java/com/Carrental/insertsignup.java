@@ -32,7 +32,6 @@ public class insertsignup {
         this.NICKNAME = NICKNAME;
     }
 
-
     public String getAGE() {
         return AGE;
     }
@@ -72,4 +71,6 @@ public class insertsignup {
     public void setGENDER(String GENDER) {
         this.GENDER = GENDER;
     }
+
+   
 }

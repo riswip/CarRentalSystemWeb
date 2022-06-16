@@ -55,7 +55,7 @@
             font: Arial;
         }
         fieldset {
-            background-color: tan;
+            background-color: gray;
             border: 10px solid rgb(255,232,57);
             width: 700px;
             float: start;
@@ -178,16 +178,17 @@
             margin-bottom: 20px;
           }
         }
+      
         </style>
     </head>
     <body>
-        <h2>Payment Details</h2>
-        <p>Please proceed this payment for rental confirmation.</p>
+        
         <div class="row">
             <div class="col-75">
                 <div class="container">
                 <form action="/action_page.php">
                     <div class="col-50">
+                        
                     <h3>Payment</h3>
                     <label for="fname">Accepted Cards</label>
                     <div class="icon-container">
