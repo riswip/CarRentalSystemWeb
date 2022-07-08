@@ -45,10 +45,11 @@
                     <div class="mb-3 row">
                         <label for="password" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Password :</label>    
                         <div class="col-10 offset-1 col-md-4 offset-md-0">
-                            <input type="password" name="password" class="form-control mb-3" size="40" id="Password" required="">
-                            <div class="form-check text-start">
-                                <input type="checkbox" onclick="myFunction()">
-                                <label>Show Password</label>
+                            <div class="input-group">
+                                <input type="password" name="password" class="form-control" size="40" id="Password" required="">
+                                <div class="input-group-text">
+                                    <input type="checkbox" class="form-check-input mt-0" onclick="myFunction()">
+                                </div>
                             </div>
                         </div>
                     </div>
