@@ -177,45 +177,47 @@
             </div>
         </nav>
         <!-- CONTENT -->
-        <div class="container col-4 pt-5 pb-5 mt-5 mb-5">
-            <form action="" method="POST">
-                <div class="">
-                    <h3>Payment</h3>
-                    <label for="fname">Accepted Cards</label>
-                    <div class="icon-container">
-                        <i class="fa fa-cc-visa" style="color:navy;"></i>
-                        <i class="fa fa-cc-amex" style="color:blue;"></i>
-                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                        <i class="fa fa-cc-discover" style="color:orange;"></i>
-                    </div>
-                    <label for="cname">Name on Card</label>
-                    <input type="text" id="cname" name="cardname" placeholder="Name on Card">
-                    <label for="ccnum">Credit card number</label>
-                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                    <div class="container-md">
-                        <div class="mb-3 row">
-                            <label class="col-form-label col-3"> Exp month : </label>
-                            <div class="col-4">
-                                <select name="expmonth" class="form-select">
-                                    <option value="January"> January </option>
-                                    <option value="February"> February </option>
-                                    <option value="March"> March </option>
-                                    <option value="April"> April </option>
-                                    <option value="May"> May </option>
-                                    <option value="June"> June </option>
-                                    <option value="July"> July </option>
-                                    <option value="August"> August </option>
-                                    <option value="September"> September </option>
-                                    <option value="October"> October </option>
-                                    <option value="November"> November </option>
-                                    <option value="December"> December </option>
-                                </select>
+        <div class="container-fluid">
+            <div class="container col-md-4 col pt-5 pb-5 mt-5 mb-5">
+                <form action="" method="POST">
+                    <div class="">
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                        </div>
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="Name on Card">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <div class="container-md">
+                            <div class="mb-3 row">
+                                <label class="col col-md-3 offset-md-0 col-form-label form-label"> Exp month : </label>
+                                <div class="col col-md-4 offset-md-0">
+                                    <select name="expmonth" class="form-select">
+                                        <option value="January"> January </option>
+                                        <option value="February"> February </option>
+                                        <option value="March"> March </option>
+                                        <option value="April"> April </option>
+                                        <option value="May"> May </option>
+                                        <option value="June"> June </option>
+                                        <option value="July"> July </option>
+                                        <option value="August"> August </option>
+                                        <option value="September"> September </option>
+                                        <option value="October"> October </option>
+                                        <option value="November"> November </option>
+                                        <option value="December"> December </option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <input type="submit" value="Continue for the receipt" class="btn">
-                </div>    
-            </form>
+                        <input type="submit" value="Continue for the receipt" class="btn">
+                    </div>    
+                </form>
+            </div>
         </div>
 
         <!-- JavaScript -->
