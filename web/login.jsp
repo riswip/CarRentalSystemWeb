@@ -36,13 +36,13 @@
             <div class="kotak col-md-5 mx-auto text-center pt-4 pb-4 mt-5">
                 <h1 class="mb-3">Login</h1>
                 <form action="processLogin.jsp" method="POST">
-                    <div class="mb-3 row">
+                    <div class="mt-3 mb-3 row">
                         <label for="email" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Email :</label>
                         <div class="col-10 offset-1 col-md-4 offset-md-0">
-                            <input type="email" id="email" name="email" class="form-control mb-3" size="60" required="">
+                            <input type="email" id="email" name="email" class="form-control" size="60" required="">
                         </div>
                     </div>
-                    <div class="mb-3 row">
+                    <div class="row">
                         <label for="password" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Password :</label>    
                         <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <div class="input-group">
@@ -53,8 +53,13 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                    <button type="reset" class="btn btn-light" onclick="window.location.href = 'login.jsp'">Reset</button>
+                    <div class="mt-3 mb-3 p-1">
+                        <button type="submit" class="btn btn-primary col-5 col-md-3">Login</button>
+                        <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'login.jsp'">Reset</button>
+                    </div>
+                    <div class="">
+                        Don't have account? <a href="signup.jsp">Sign up</a>
+                    </div>
                 </form>
                 <div class="message col-8 mx-auto">
                     <%
@@ -70,14 +75,14 @@
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
         <script>
-                        function myFunction() {
-                            var x = document.getElementById("Password");
-                            if (x.type === "password") {
-                                x.type = "text";
-                            } else {
-                                x.type = "password";
+                            function myFunction() {
+                                var x = document.getElementById("Password");
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                } else {
+                                    x.type = "password";
+                                }
                             }
-                        }
         </script>
     </body>
 </html>

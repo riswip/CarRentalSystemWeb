@@ -19,6 +19,9 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
+div a {
+    text-decoration: none;
+}
 nav a {
     color: white;
 }

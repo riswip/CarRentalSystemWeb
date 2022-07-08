@@ -32,7 +32,7 @@
         </nav>
         <!-- CONTENT -->
         <div class="container-fluid">
-            <div class="kotak col-md-5 mx-auto text-center pt-4 pb-4 mt-5">
+            <div class="kotak col-md-5 mx-auto text-center pt-4 pb-4 mt-5 mb-5">
                 <h1 class="mb-3">Sign Up</h1>
                 <form action="processSignup.jsp" method="post">
                     <div class="mb-3 row">
@@ -79,15 +79,21 @@
                     <div class="mb-3 row">
                         <label for="password" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Password :</label>
                         <div class="col-10 offset-1 col-md-5">
-                            <input type="password" size="40" id="Password" name="password" class="form-control mb-3" required="">
-                            <div class="form-check text-start">
-                                <input type="checkbox" onclick="myFunction()">
-                                <label>Show password</label>
+                            <div class="input-group">
+                                <input type="password" name="password" class="form-control" size="40" id="Password" required="">
+                                <div class="input-group-text">
+                                    <input type="checkbox" class="form-check-input mt-0" onclick="myFunction()">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign up</button>
-                    <button type="reset" class="btn btn-light">Cancel</button>
+                    <div class="mt-3 mb-3 p-1">
+                        <button type="submit" class="btn btn-primary col-5 col-md-3">Sign up</button>
+                        <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'signup.jsp'">Cancel</button>
+                    </div>
+                    <div class="">
+                        Already have account? <a href="login.jsp">Login</a>
+                    </div>
                 </form>
                 <div class="message col-8 mx-auto">
                     <%
@@ -103,14 +109,14 @@
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
         <script>
-                                    function myFunction() {
-                                        var x = document.getElementById("Password");
-                                        if (x.type === "password") {
-                                            x.type = "text";
-                                        } else {
-                                            x.type = "password";
-                                        }
-                                    }
+                            function myFunction() {
+                                var x = document.getElementById("Password");
+                                if (x.type === "password") {
+                                    x.type = "text";
+                                } else {
+                                    x.type = "password";
+                                }
+                            }
         </script>
     </body>
 </html>
