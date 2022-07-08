@@ -1,0 +1,44 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 8 Jul 2022, 3:25:29 pm
+    Author     : Asyraf
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html *, body {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-image: url("https://www.rentacarkerala.in/wp-content/uploads/2018/10/best.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+nav a {
+    color: white;
+}
+.navbar-toggler, .navbar-toggler-icon {
+    background-color: #cccccc;
+}
+.kotak {
+    margin: auto;
+    width: 60%;
+}
+.btn-light {
+    border: 0.5px solid #cccccc;
+}
+.btn-light:hover {
+    background-color: #cccccc;
+}
+.car-list {
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 15px;
+}
+.img-car {
+    width: 400px;
+}

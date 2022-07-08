@@ -7,110 +7,94 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
-        <title>SIGN UP</title>
+        <title>Sign Up - Car Rental</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-        body {
-          margin: 0;
-          font-family: Arial, Helvetica, sans-serif;
-          background-image: url("https://www.rentacarkerala.in/wp-content/uploads/2018/10/best.jpg");
-          background-size: 100%;
-        }
-        .topnav {
-          overflow: hidden;
-          background-color: #040405;
-        }
-        .topnav a {
-          float: left;
-          color: #ED8BF9;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-          font-size: 17px;
-        }
-        .topnav a:hover {
-          background-color: #ED8BF9;
-          color: black;
-        }
-        .topnav a.active {
-          background-color: #F74211;
-          color: white;
-        }
-        div {
-            text-align: justify-all;
-        }
-        button {
-          border: 2px solid #AD078A;
-          color: palegoldenrod;
-          padding: 20px 40px;
-          text-align: center;
-          text-decoration: pink;
-          display: inline-block;
-          font-size: 20px;
-          margin: 10px 10px;
-          cursor: pointer;
-          background-color: black;
-          font: Arial;
-        }
-        form group {
-          background-color: tan;
-          border: 10px solid rgb(255,232,57);
-          width: 700px;
-          float: start;
-        }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="<%= request.getContextPath()%>/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= request.getContextPath()%>/css/main-style.css">
     </head>
     <body>
-        <!-- TOP NAVIGATION -->
-        <div class="topnav">
-            <a class="active" href="index.jsp">Home</a>
-            <a href="login.jsp">Login</a>
-            <a href="carrentanddetails.jsp">Car Rent And Details</a>
-            <a href="payment.jsp">Payment</a>
-        </div>
-        <!-- CONTENT -->
-        <div>
-            <div class="form group">
-                <form action="processSignup.jsp" method="post">
-                    <label for="name">Name :</label>
-                    <input type="text" id="name" name="NAME"size="60" placeholder="Enter your name"><br><br/>
-
-                    <label for="name">Nick Name :</label>
-                    <input type="text" id="nickname" name="NICKNAME"size="60" placeholder="Enter your nick name"><br><br/>              
-
-                    <label for="icno">Age :</label>
-                    <input type="text" id="age" name="AGE" size="10" maxlength="3" placeholder="000"><br><br/>  
-
-                    <label for="email">E-mail :</label>
-                    <input type="text" id="email" name="EMAIL"size="60" placeholder="Enter your email"><br><br/>
-
-                    <label for="phoneno">Phone No :</label>
-                    <input type="text" id="phoneno" name="PHONENO" size="40" placeholder="E.g.: 011-12334455"><br><br/> 
-
-                    <label for="password">Password :</label>    
-                    <input type="password"  size="40" id="PASSWORRD" placeholder="**********"><br><br/>
-                    <input type="checkbox" onclick="myFunction()">Show Password <br><br/>
-
-                    <label>Gender :</label>
-                    <select name="gender">
-                        <option value="Male">Male </option>
-                        <option value="Female">Female </option>
-                    </select> <br><br/>
-                    
-                    <button> <input type="Submit">Submit</button>
-                    <button> <input type="reset">Cancel</button>
-                </form>
+        <!-- TOP NAVIGATION BAR -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Car Rental</a>
+                <button class="navbar-toggler tb-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    -
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <%@include file="navbar.jsp" %>
+                    </ul>
+                </div>
             </div>
-            
+        </nav>
+        <!-- CONTENT -->
+        <div class="kotak col-6 text-center pt-5 pb-5">
+            <h1 class="mb-3">Sign Up</h1>
+            <form action="processSignup.jsp" method="post">
+                <div class="mb-3 row">
+                    <label for="name" class="col-2 text-start col-form-label offset-3">Name :</label>
+                    <div class="col-4">
+                        <input type="text" id="name" name="NAME" class="form-control col" size="60" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="name" class="col-2 text-start col-form-label offset-3">Nick Name :</label>
+                    <div class="col-4">
+                        <input type="text" id="nickname" name="NICKNAME" class="form-control" size="60" placeholder="Enter your nick name">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="icno" class="col-2 text-start col-form-label offset-3">Age :</label>
+                    <div class="col-4">
+                        <input type="text" id="age" name="AGE" class="form-control" size="10" maxlength="3" placeholder="000">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="email" class="col-2 text-start col-form-label offset-3">E-mail :</label>
+                    <div class="col-4">
+                        <input type="email" id="email" name="EMAIL" class="form-control" size="60" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="phoneno" class="col-2 text-start col-form-label offset-3">Phone No :</label>
+                    <div class="col-4">
+                        <input type="text" id="phoneno" name="PHONENO" class="form-control" size="40" placeholder="E.g.: 011-12334455">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="password" class="col-2 text-start col-form-label offset-3">Password :</label>
+                    <div class="col-4">
+                        <input type="password" size="40" id="Password" class="form-control mb-3" placeholder="**********">
+                        <div class="form-check text-start">
+                            <input type="checkbox" onclick="myFunction()">
+                            <label>Show password</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-2 text-start col-form-label offset-3">Gender :</label>
+                    <div class="col-4">
+                        <select name="gender" class="form-select">
+                            <option value="Male">Male </option>
+                            <option value="Female">Female </option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign up</button>
+                <button type="reset" class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+
         <!-- JavaScript -->
+        <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
         <script>
             function myFunction() {
                 var x = document.getElementById("Password");
                 if (x.type === "password") {
                     x.type = "text";
-                } 
-                else {
+                } else {
                     x.type = "password";
                 }
             }

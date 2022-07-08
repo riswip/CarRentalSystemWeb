@@ -8,70 +8,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <title>Car Rental System Home</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-        body {
-          margin: 0;
-          font-family: Arial, Helvetica, sans-serif;
-          background-image: url("https://www.rentacarkerala.in/wp-content/uploads/2018/10/best.jpg");
-          background-size: 100%;
-        }
-        .topnav {
-          overflow: hidden;
-          background-color: #040405;
-        }
-        .topnav a {
-          float: left;
-          color: #ED8BF9;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-          font-size: 17px;
-        }
-        .topnav a:hover {
-          background-color: #ED8BF9;
-          color: black;
-        }
-        .topnav a.active {
-          background-color: #F74211;
-          color: white;
-        }
-        div {
-            text-align: center;
-        }
-        button {
-          border: 2px solid #AD078A;
-          color: pink;
-          padding: 20px 40px;
-          text-align: center;
-          text-decoration: purple;
-          display: inline-block;
-          font-size: 30px;
-          margin: 40px 20px;
-          cursor: pointer;
-          background-color: black;
-          font: Arial;
-        }
-        </style>
+        <link rel="stylesheet" href="<%= request.getContextPath()%>/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<%= request.getContextPath()%>/css/main-style.css">
     </head>
     <body>
         <!-- TOP NAVIGATION BAR -->
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="login.jsp">Login</a>
-            <a href="carrentanddetails.jsp">Car Rent And Details</a>
-            <a href="payment.jsp">Payment</a>
-        </div>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Car Rental</a>
+                <button class="navbar-toggler tb-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    -
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <%@include file="navbar.jsp" %>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <!-- CONTENT -->
-        <div>
-            <h1>Welcome to our Car Rental Website </h1> 
+        <div class="text-center">
+            <h1 class="text-center pt-5 pb-5">Welcome to our Car Rental Website </h1> 
             <p> Sign up if does not have any account yet </p>
             <p> Click here ! </p>
-            <button><a href="signup.jsp">SIGN UP</a></button>
+            <a href="signup.jsp" type="button" class="btn btn-primary">Sign Up</a>
         </div>
+
+        <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
