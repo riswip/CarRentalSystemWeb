@@ -4,6 +4,12 @@ Created on : Jun 4, 2022, 3:16:47 PM
 Author     : Aspire E 14
 --%>
 
+<%
+    String userSession = (String) session.getAttribute("userSession");
+%>
+<%@page import="com.Model.User"%>
+<%@page import="java.sql.*"%>
+<%@page import="com.util.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
@@ -22,14 +28,12 @@ Author     : Aspire E 14
                     -
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <%@include file="navbar.jsp" %>
-                    </ul>
+                    <%@include file="navbar.jsp" %>
                 </div>
             </div>
         </nav>
         <!-- CONTENT -->
-        <div class="kotak col-6 text-center pt-5 pb-5">
+        <div class="col-md-6 mx-auto text-center pt-4 pb-4 mt-5">
             <h1 class="mb-3">Car Details</h1>
             <div class="mb-3 row car-list">
                 <form action="bookmyvi.jsp" method="post">

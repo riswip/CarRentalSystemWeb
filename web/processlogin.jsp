@@ -18,15 +18,15 @@
 
             DBConnection con = new DBConnection();
             
+            //CHECK USER EMAIL AND PASSWORD
             String sql = "SELECT * FROM users WHERE email='" + User.getEmail() + "' AND pass='" + User.getPassword() + "'";
             Statement stmt = con.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sql);
-            
+
             if (rs.next()) {
                 session.setAttribute("userSession", User.getEmail());
                 request.getRequestDispatcher("account.jsp").forward(request, response);
-            }
-            else {
+            } else {
                 request.setAttribute("message", "<p class='alert error'>Failed to login.</p>");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }

@@ -4,6 +4,12 @@
     Author     : Aspire E 14
 --%>
 
+<%
+    String userSession = (String) session.getAttribute("userSession");
+%>
+<%@page import="com.Model.User"%>
+<%@page import="java.sql.*"%>
+<%@page import="com.util.DBConnection"%>
 <html>
     <head>
         <title>Login - Car Rental</title>
@@ -21,9 +27,7 @@
                     -
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <%@include file="navbar.jsp" %>
-                    </ul>
+                    <%@include file="navbar.jsp" %>
                 </div>
             </div>
         </nav>
@@ -48,14 +52,14 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
-                <button type="reset" class="btn btn-light">Reset</button>
+                <button type="reset" class="btn btn-light" onclick="window.location.href = 'login.jsp'">Reset</button>
             </form>
             <div class="message col-8 mx-auto">
                 <%
                     String message = (String) request.getAttribute("message");
                     if (message != null) {
                 %>
-                    <%=  request.getAttribute("message")%>
+                <%=  request.getAttribute("message")%>
                 <%  }%>
             </div>
         </div>
@@ -63,14 +67,14 @@
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
         <script>
-                                function myFunction() {
-                                    var x = document.getElementById("Password");
-                                    if (x.type === "password") {
-                                        x.type = "text";
-                                    } else {
-                                        x.type = "password";
-                                    }
-                                }
+                    function myFunction() {
+                        var x = document.getElementById("Password");
+                        if (x.type === "password") {
+                            x.type = "text";
+                        } else {
+                            x.type = "password";
+                        }
+                    }
         </script>
     </body>
 </html>

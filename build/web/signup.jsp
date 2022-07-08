@@ -4,6 +4,9 @@
     Author     : Aspire E 14
 --%>
 
+<%
+    String userSession = (String) session.getAttribute("userSession");
+%>
 <%@page import="com.Model.User" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
@@ -23,9 +26,7 @@
                     -
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <%@include file="navbar.jsp" %>
-                    </ul>
+                    <%@include file="navbar.jsp" %>
                 </div>
             </div>
         </nav>
