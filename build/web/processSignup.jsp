@@ -4,62 +4,45 @@
     Author     : Aspire E 14
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="com.util.DBConnection"%>
 <%@page language="java"%>
 <%@page import="java.sql.*"%>
-
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    
     <body>
-       
-        <jsp:useBean id="myAuthor" class="com.Carrental.insertsignup" scope="request"/>
-        <jsp:setProperty name="myAuthor" property="*"/>
-          
+        <jsp:useBean id="User" class="com.Model.User" scope="request"/>
+        <jsp:setProperty name="User" property="*"/>
         <%
             int result;
-            
-            Class.forName("com.mysql.jdbc.Driver");
-            
-            String myURL = "jdbc:mysql://localhost:3306/carrental";
-            Connection myConnection = DriverManager.getConnection(myURL, "root", "admin");
-            
-            String sInsertQry = "INSERT INTO signup(NAME, NICKNAME, AGE, EMAIL, PHONENO, PASSWORRD, GENDER) VALUES(?,?,?,?,?,?,?,)";
-            
-            PreparedStatement myPS = myConnection.prepareStatement(sInsertQry);
-                    
-            myPS.setString(1, myAuthor.getNAME());
-            myPS.setString(2, myAuthor.getNICKNAME());
-            myPS.setString(3, myAuthor.getAGE());
-            myPS.setString(4, myAuthor.getEMAIL());
-            myPS.setString(5, myAuthor.getPHONENO());
-            myPS.setString(6, myAuthor.getPASSWORRD());
-            myPS.setString(7, myAuthor.getGENDER());
-            
 
-            result = myPS.executeUpdate();
-            
-            if(result > 0){
-                out.println("\tRecord successfully added into Signup table...!");
-                out.print("<p>"+"Record with signup NAME " + myAuthor.getNAME()
-                        + " successfully created..!"+"</p>");
-                out.println("<p>"+"Details of record area; " + "</p>");
-                out.println("<p>NICKNAME : "+ myAuthor.getNICKNAME() + "</p>");
-                out.println("<p>AGE: "+ myAuthor.getAGE() + "</p>");
-                out.println("<p>EMAIL : "+ myAuthor.getEMAIL() + "</p>");
-                out.println("<p>PHONENO : "+ myAuthor.getPHONENO() + "</p>");
-                out.println("<p>PASSWORRD : "+ myAuthor.getPASSWORRD() + "</p>");
-                out.println("<p>GENDER : "+ myAuthor.getGENDER() + "</p>");
+            DBConnection con = new DBConnection();
+
+            String sqlCheck = "SELECT * FROM users WHERE email='" + User.getEmail() + "'";
+            Statement stmt = con.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sqlCheck);
+
+            if (rs.next() != true) {
+                String sql = "INSERT INTO users(userName, userNickName, age, phoneNo, gender, email, pass) VALUES(?,?,?,?,?,?,?)";
+
+                PreparedStatement myPS = con.getConnection().prepareStatement(sql);
+
+                myPS.setString(1, User.getName());
+                myPS.setString(2, User.getNickname());
+                myPS.setString(3, User.getAge());
+                myPS.setString(4, User.getPhoneno());
+                myPS.setString(5, User.getGender());
+                myPS.setString(6, User.getEmail());
+                myPS.setString(7, User.getPassword());
+                myPS.executeUpdate();
+
+                request.setAttribute("message", "<p class='alert success'>Sign up successful. Login to continue.</p>");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            } else {
+                request.setAttribute("message", "<p class='alert error'>Failed to sign up email " + User.getEmail() + " already exist.</p>");
+                request.getRequestDispatcher("signup.jsp").forward(request, response);
             }
-
-            
-            //Step 5: Close database connection..!
-            System.out.println("Step 5: Close database connection...!");
-            myConnection.close();
-            System.out.println("");
-            System.out.println("Databse connection is closed...!");
-            %>
-        
+            con.getConnection().close();;
+        %>
     </body>
 </html>

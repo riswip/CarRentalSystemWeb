@@ -1,11 +1,17 @@
--- TABLE SIGNUP CREATION --
-CREATE TABLE signup(
-id int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-name varchar(50),
-icno varchar(20) UNIQUE,
+CREATE DATABASE carrental;
+USE carrental;
+
+-- TABLE USER --
+CREATE TABLE users(
+id int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+userName varchar(50),
+userNickName varchar(50),
 age int,
-email varchar(50) UNIQUE,
 phoneNo varchar(20),
-password varchar(50),
-gender varchar(10)
+gender varchar(10),
+email varchar(50) UNIQUE,
+pass varchar(50),
+createdDatetime datetime NOT NULL DEFAULT current_timestamp()
 );
+
+ALTER TABLE users AUTO_INCREMENT = 10000;

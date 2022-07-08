@@ -28,19 +28,19 @@
             </div>
         </nav>
         <!-- CONTENT -->
-        <div class="kotak col-6 text-center pt-5 pb-5">
+        <div class="kotak col-md-5 mx-auto text-center pt-4 pb-4 mt-5">
             <h1 class="mb-3">Login</h1>
-            <form action="userAccount.jsp" method="post">
+            <form action="processLogin.jsp" method="POST">
                 <div class="mb-3 row">
-                    <label for="name" class="col-2 text-start col-form-label offset-3">Nick Name :</label>
+                    <label for="email" class="col-2 text-start col-form-label offset-3">Email :</label>
                     <div class="col-4">
-                        <input type="text" id="nickname" name="NICKNAME" class="form-control mb-3" size="60" placeholder="Enter your nick name">
+                        <input type="email" id="email" name="email" class="form-control mb-3" size="60" required="">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="password" class="col-2 text-start col-form-label offset-3">Password :</label>    
                     <div class="col-4">
-                        <input type="password" name="PASSWORRD" class="form-control mb-3" size="40" id="Password" placeholder="**********">
+                        <input type="password" name="password" class="form-control mb-3" size="40" id="Password" required="">
                         <div class="form-check text-start">
                             <input type="checkbox" onclick="myFunction()">
                             <label>Show Password</label>
@@ -48,21 +48,29 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
-                <button type="reset" class="btn btn-light">Cancel</button>
+                <button type="reset" class="btn btn-light">Reset</button>
             </form>
+            <div class="message col-8 mx-auto">
+                <%
+                    String message = (String) request.getAttribute("message");
+                    if (message != null) {
+                %>
+                    <%=  request.getAttribute("message")%>
+                <%  }%>
+            </div>
         </div>
 
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
         <script>
-            function myFunction() {
-                var x = document.getElementById("Password");
-                if (x.type === "password") {
-                    x.type = "text";
-                } else {
-                    x.type = "password";
-                }
-            }
+                                function myFunction() {
+                                    var x = document.getElementById("Password");
+                                    if (x.type === "password") {
+                                        x.type = "text";
+                                    } else {
+                                        x.type = "password";
+                                    }
+                                }
         </script>
     </body>
 </html>

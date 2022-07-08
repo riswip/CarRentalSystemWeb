@@ -4,52 +4,33 @@
     Author     : Aspire E 14
 --%>
 
+<%@page import="com.util.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page language="java"%>
 <%@page import="java.sql.*"%>
-
-
 <!DOCTYPE html>
 <html>
-    
     <body>
-       
-        <jsp:useBean id="ehem" class="com.Carrental.insertlogin" scope="request"/>
-        <jsp:setProperty name="ehem" property="*"/>
-          
+        <jsp:useBean id="User" class="com.Model.User" scope="request"/>
+        <jsp:setProperty name="User" property="*"/>
         <%
             int result;
-            
-            Class.forName("com.mysql.jdbc.Driver");
-            
-            String myURL = "jdbc:mysql://localhost:3306/carrental";
-            Connection myConnection = DriverManager.getConnection(myURL, "root", "admin");
-            
-            String sInsertQry = "INSERT INTO login(NICKNAME,PASSWORRD) VALUES(?,?)";
-            
-            PreparedStatement myPS = myConnection.prepareStatement(sInsertQry);
-            
-            myPS.setString(1, ehem.getNICKNAME());
-            myPS.setString(2, ehem.getPASSWORRD());
-            
 
-            result = myPS.executeUpdate();
+            DBConnection con = new DBConnection();
             
-            if(result > 0){
-                out.println("\tRecord successfully added into login table...!");
-                out.print("<p>"+"Record with login NICKNAME " + ehem.getNICKNAME()
-                        + " successfully log into the system..!"+"</p>");
-                out.println("<p>"+"Details of record area; " + "</p>");
-                out.println("<p>PASSWORRD : "+ ehem.getPASSWORRD() + "</p>");
+            String sql = "SELECT * FROM users WHERE email='" + User.getEmail() + "' AND pass='" + User.getPassword() + "'";
+            Statement stmt = con.getConnection().createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            
+            if (rs.next()) {
+                session.setAttribute("userSession", User.getEmail());
+                request.getRequestDispatcher("account.jsp").forward(request, response);
             }
-
-            
-            //Step 5: Close database connection..!
-            System.out.println("Step 5: Close database connection...!");
-            myConnection.close();
-            System.out.println("");
-            System.out.println("Databse connection is closed...!");
-            %>
-        
+            else {
+                request.setAttribute("message", "<p class='alert error'>Failed to login.</p>");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }
+            con.getConnection().close();
+        %>
     </body>
 </html>
