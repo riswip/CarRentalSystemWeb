@@ -36,34 +36,34 @@
                 <h1 class="mb-3">Sign Up</h1>
                 <form action="processSignup.jsp" method="post">
                     <div class="mb-3 row">
-                        <label for="name" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Name :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label for="name" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Name :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <input type="text" id="name" name="name" class="form-control col" size="60" placeholder="Enter your name" required="">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="name" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Nick Name :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label for="name" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Nick Name :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <input type="text" id="nickname" name="nickname" class="form-control" size="60" placeholder="Enter your nick name" required="">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="age" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Age :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label for="age" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Age :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <input type="text" id="age" name="age" class="form-control" maxlength="3" required="">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label for="phoneno" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Phone No :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label for="phoneno" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Phone No :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <input type="text" id="phoneno" name="phoneno" class="form-control" size="40" placeholder="E.g. 011-12334455" required="">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                        <label class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Gender :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Gender :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <select name="gender" class="form-select" required="">
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
@@ -71,14 +71,14 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="email" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">E-mail :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label for="email" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">E-mail :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <input type="email" id="email" name="email" class="form-control" size="60" placeholder="Enter your email" required="">
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="password" class="col-10 offset-1 col-md-3 text-start col-form-label offset-md-2">Password :</label>
-                        <div class="col-10 offset-1 col-md-5">
+                        <label for="password" class="col-10 offset-1 col-md-2 text-start col-form-label offset-md-3">Password :</label>
+                        <div class="col-10 offset-1 col-md-4 offset-md-0">
                             <div class="input-group">
                                 <input type="password" name="password" class="form-control" size="40" id="Password" required="">
                                 <div class="input-group-text">
@@ -95,7 +95,7 @@
                         Already have account? <a href="login.jsp">Login</a>
                     </div>
                 </form>
-                <div class="message col-8 mx-auto">
+                <div class="message col-10 col-md-8 mx-auto">
                     <%
                         String message = (String) request.getAttribute("message");
                         if (message != null) {

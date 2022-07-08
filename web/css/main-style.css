@@ -46,18 +46,6 @@ nav a {
 .img-car {
     width: 400px;
 }
-.alert {
-    padding: 10px;
-    background-color: aliceblue;
-}
-.success {
-    border: 1px solid green;
-    color: green;
-}
-.error {
-    border: 1px solid red;
-    color: red;
-}
 .username {
     color: white;
 }

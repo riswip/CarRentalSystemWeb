@@ -46,6 +46,36 @@
                 </div>
             </div>
         </nav>
+        <!-- CONTENT -->
+        <div class="container-fluid">
+            <div class="kotak col-md-6 mx-auto p-5 mt-md-5">
+                <h1 class="text-center">Profile</h1>
+                <div class="mb-3 row">
+                    <label class="col-form-label col-2">Name:</label>
+                    <label class="col-form-label col"><%= rs.getString(2) %></label>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-form-label col-2">Nickname:</label>
+                    <label class="col-form-label col"><%= rs.getString(3) %></label>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-form-label col-2">Age:</label>
+                    <label class="col-form-label col"><%= rs.getString(4) %></label>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-form-label col-2">Phone no:</label>
+                    <label class="col-form-label col"><%= rs.getString(5) %></label>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-form-label col-2">Gender:</label>
+                    <label class="col-form-label col"><%= rs.getString(6) %></label>
+                </div>
+                <div class="mb-3 row">
+                    <label class="col-form-label col-2">Email:</label>
+                    <label class="col-form-label col"><%= rs.getString(7) %></label>
+                </div>
+            </div>
+        </div>
 
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>

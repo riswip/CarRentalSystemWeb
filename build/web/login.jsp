@@ -61,7 +61,7 @@
                         Don't have account? <a href="signup.jsp">Sign up</a>
                     </div>
                 </form>
-                <div class="message col-8 mx-auto">
+                <div class="message col-10 col-md-8 col-md-8 mx-auto">
                     <%
                         String message = (String) request.getAttribute("message");
                         if (message != null) {

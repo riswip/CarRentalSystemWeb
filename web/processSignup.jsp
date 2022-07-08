@@ -36,10 +36,10 @@
                 myPS.setString(7, User.getPassword());
                 myPS.executeUpdate();
 
-                request.setAttribute("message", "<p class='alert success'>Sign up successful. Login to continue.</p>");
+                request.setAttribute("message", "<p class='alert alert-success'>Sign up successful. Login to continue.</p>");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             } else {
-                request.setAttribute("message", "<p class='alert error'>Failed to sign up email " + User.getEmail() + " already exist.</p>");
+                request.setAttribute("message", "<p class='alert alert-danger'>Failed to sign up email " + User.getEmail() + " already exist.</p>");
                 request.getRequestDispatcher("signup.jsp").forward(request, response);
             }
             con.getConnection().close();;
