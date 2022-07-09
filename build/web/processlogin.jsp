@@ -27,7 +27,7 @@
                 session.setAttribute("userSession", User.getEmail());
                 request.getRequestDispatcher("account.jsp").forward(request, response);
             } else {
-                request.setAttribute("message", "<p class='alert alert-danger'>Failed to login.</p>");
+                request.setAttribute("message", "<p class='alert alert-danger'>Failed to login! Wrong email or password.</p>");
                 request.getRequestDispatcher("login.jsp").forward(request, response);
             }
             con.getConnection().close();
