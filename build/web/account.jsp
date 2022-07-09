@@ -50,15 +50,15 @@
         </nav>
         <!-- CONTENT -->
         <div class="container-fluid">
-            <div class="kotak col-md-6 mx-auto p-5 mt-md-5">
+            <div class="kotak col-md-6 mx-auto pt-4 pb-4 p-md-5 mt-5">
                 <h1 class="text-center">Welcome, Admin</h1>
                 <div class="mb-3 row">
-                    <label class="col-form-label col-2">Name:</label>
-                    <label class="col-form-label col"><%= rs.getString(2) %></label>
+                    <label class="col-form-label col-2">Name</label>
+                    <label class="col-form-label col">: <%= rs.getString(2)%></label>
                 </div>
                 <div class="mb-3 row">
-                    <label class="col-form-label col-2">Email:</label>
-                    <label class="col-form-label col"><%= rs.getString(7) %></label>
+                    <label class="col-form-label col-2">Email</label>
+                    <label class="col-form-label col">: <%= rs.getString(7)%></label>
                 </div>
             </div>
         </div>
@@ -102,32 +102,41 @@
         </nav>
         <!-- CONTENT -->
         <div class="container-fluid">
-            <div class="kotak col-md-6 mx-auto p-5 mt-md-5">
-                <h1 class="text-center">Profile</h1>
-                <div class="mb-3 row">
-                    <label class="col-form-label col-2">Name:</label>
-                    <label class="col-form-label col"><%= rs.getString(2) %></label>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-form-label col-2">Nickname:</label>
-                    <label class="col-form-label col"><%= rs.getString(3) %></label>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-form-label col-2">Age:</label>
-                    <label class="col-form-label col"><%= rs.getString(4) %></label>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-form-label col-2">Phone no:</label>
-                    <label class="col-form-label col"><%= rs.getString(5) %></label>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-form-label col-2">Gender:</label>
-                    <label class="col-form-label col"><%= rs.getString(6) %></label>
-                </div>
-                <div class="mb-3 row">
-                    <label class="col-form-label col-2">Email:</label>
-                    <label class="col-form-label col"><%= rs.getString(7) %></label>
-                </div>
+            <div class="kotak col-md-6 mx-auto pt-4 pb-4 p-md-5 mt-5">
+                <h1 class="text-center mb-3">Profile</h1>
+                <table class="table table-light table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="2">My Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Full Name</th>
+                            <td><%= rs.getString(2)%></td>
+                        </tr>
+                        <tr>
+                            <th>Nickname</th>
+                            <td><%= rs.getString(3)%></td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td><%= rs.getString(4)%></td>
+                        </tr>
+                        <tr>
+                            <th>Phone No</th>
+                            <td><%= rs.getString(5)%></td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <td><%= rs.getString(6)%></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><%= rs.getString(7)%></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 

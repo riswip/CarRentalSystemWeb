@@ -23,6 +23,7 @@
         while (rs.next()) {
 %>
 <%@page import="com.Model.User"%>
+<%@page import="com.Model.Car"%>
 <%@page import="java.sql.*"%>
 <%@page import="com.util.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -48,6 +49,46 @@
                 </div>
             </div>
         </nav>
+        <!-- CONTENT -->
+        <div class="container-fluid">
+            <div class="kotak col-md-6 mx-auto pt-4 pb-4 p-md-5 mt-5">
+                <h1 class="text-center">Car List</h1>
+                <table class="table table-striped table-responsive-sm">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Car Name</th>
+                            <th>Brand</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <%
+                        int i = 1;
+                        Car car = new Car();
+                        
+                        String sqlCar = "SELECT * FROM car ORDER BY brand ASC";
+                        Statement stmtCar = con.getConnection().createStatement();
+                        ResultSet rsCar = stmtCar.executeQuery(sqlCar);
+                        
+                        while(rsCar.next()) {
+                    %>
+                    <tbody>
+                        <tr>
+                            <td><%= i++ %></td>
+                            <td><%= rsCar.getString(2) %></td>
+                            <td><%= rsCar.getString(3) %></td>
+                            <td><%= rsCar.getString(8) %></td>
+                            <td>
+                                <button class="btn btn-light" onclick="window.window.location.href=''"><span class="bi bi-pencil-square"></span></button>
+                                <button class="btn btn-danger" onclick="window.window.location.href=''"><span class="bi bi-x"></span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <%  }%>
+                </table>
+            </div>
+        </div>
 
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>
