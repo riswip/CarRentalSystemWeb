@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/CarRentalSystemWeb/web/META-INF/context.xml</file>
+            <file>file:/C:/xampp/htdocs/Car-Rental/web/account.jsp</file>
+            <file>file:/C:/xampp/htdocs/Car-Rental/web/admin-view-car.jsp</file>
+            <file>file:/C:/xampp/htdocs/Car-Rental/web/admin-add-car.jsp</file>
+            <file>file:/C:/xampp/htdocs/Car-Rental/web/css/main-style.css</file>
         </group>
     </open-files>
 </project-private>
