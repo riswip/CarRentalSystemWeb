@@ -53,3 +53,7 @@ nav a {
 .username {
     color: white;
 }
+.car-name {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
