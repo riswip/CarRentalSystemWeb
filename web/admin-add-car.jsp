@@ -10,7 +10,7 @@
     int customer = 2;
 
     if (userSession == null) {
-        request.setAttribute("message", "<p class='alert warning'>Your session has ended. Please login to continue</p>");
+        request.setAttribute("message", "<p class='alert alert-warning'>Your session has ended. Please login to continue</p>");
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
     if (userSession != null) {
@@ -48,6 +48,61 @@
                 </div>
             </div>
         </nav>
+        <!-- CONTENT -->
+        <div class="container-fluid">
+            <div class="kotak col-md-5 mx-auto pt-4 pb-4 mt-5 mb-5">
+                <h1 class="mb-3 text-center">Add Car</h1>
+                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="process-add-car.jsp" method="POST">
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Car Name</label>
+                        <input type="text" id="" name="carName" class="form-control col" size="60" required="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Brand</label>
+                        <input type="text" id="" name="brand" class="form-control" size="60" required="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Transmission</label>
+                        <select name="transmission" class="form-select" required="">
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Plate</label>
+                        <input type="text" id="" name="plateNo" class="form-control" size="40" required="">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Rate/hour</label>
+                        <input type="text" id="" name="rate" class="form-control" maxlength="3" required="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">No of Passenger</label>
+                        <input type="text" id="" name="passenger" class="form-control" size="60" required="">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Status</label>
+                        <select name="status" class="form-select" required="">
+                            <option value="Available">Available</option>
+                            <option value="Unavailable">Unavailable</option>
+                            <option value="Under Maintenance">Under Maintenance</option>
+                        </select>
+                    </div>
+                    <div class="mt-3 mb-3 p-1 text-center">
+                        <button type="submit" class="btn btn-primary col-5 col-md-3">Submit</button>
+                        <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'admin-add-car.jsp'">Cancel</button>
+                    </div>
+                </form>
+                <div class="message col-10 col-md-8 mx-auto text-center">
+                    <%
+                        String message = (String) request.getAttribute("message");
+                        if (message != null) {
+                    %>
+                    <%=  request.getAttribute("message")%>
+                    <%  }%>
+                </div>
+            </div>
+        </div>
 
         <!-- JavaScript -->
         <script src="<%= request.getContextPath()%>/js/bootstrap.bundle.min.js"></script>

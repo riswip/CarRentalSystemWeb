@@ -37,10 +37,10 @@ CREATE TABLE car (
 id int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 carName varchar(50),
 brand varchar(50),
-trasmission varchar(50),
-plate varchar(50),
+transmission varchar(50),
+plate varchar(50) UNIQUE,
 rateHour decimal(9,2),
-passanger int,
+passenger int,
 carStatus varchar(50),
 createdDateTime datetime NOT NULL DEFAULT current_timestamp()
 );

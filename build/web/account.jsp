@@ -10,7 +10,7 @@
     int customer = 2;
 
     if (userSession == null) {
-        request.setAttribute("message", "<p class='alert warning'>Your session has ended. Please login to continue</p>");
+        request.setAttribute("message", "<p class='alert alert-warning'>Your session has ended. Please login to continue</p>");
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
     if (userSession != null) {
