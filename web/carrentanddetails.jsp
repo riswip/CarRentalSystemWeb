@@ -48,40 +48,38 @@ Author     : Aspire E 14
                     while (rsCar.next()) {
                 %>
                 <div class="mb-3 car-list">
-                    <form action="" method="POST">
-                        <p class="car-name"><%= rsCar.getString(3) %> - <%= rsCar.getString(2)%></p>
-                        <div class="row">
-                            <div class="col-12 col-md mb-3">
-                                <img src="images/default-image.png" alt="PERODUA MYVI" class="img-car img-thumbnail">
+                    <p class="car-name"><%= rsCar.getString(3)%> - <%= rsCar.getString(2)%></p>
+                    <div class="row">
+                        <div class="col-12 col-md mb-3">
+                            <img src="images/default-image.png" alt="PERODUA MYVI" class="img-car img-thumbnail">
+                        </div>
+                        <div class="col mt-md-4">
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Car Name</label>: <%= rsCar.getString(2)%>
                             </div>
-                            <div class="col mt-md-4">
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Car Name</label>: <%= rsCar.getString(2)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Brand</label>: <%= rsCar.getString(3)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Transmission</label>: <%= rsCar.getString(4)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Plate No</label>: <%= rsCar.getString(5)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Rate/hour</label>: <%= rsCar.getString(6)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Passenger</label>: <%= rsCar.getString(7)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <label class="col-md-4">Status</label>: <%= rsCar.getString(8)%>
-                                </div>
-                                <div class="mb-3 text-md-start">
-                                    <button type="submit" class="btn btn-light">BOOK NOW</button>
-                                </div>
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Brand</label>: <%= rsCar.getString(3)%>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Transmission</label>: <%= rsCar.getString(4)%>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Plate No</label>: <%= rsCar.getString(5)%>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Rate/hour</label>: <%= rsCar.getString(6)%>
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Passenger</label>: <%= rsCar.getString(7)%> People
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="col-5 offset-1 offset-md-0 col-md-4">Status</label>: <%= rsCar.getString(8)%>
+                            </div>
+                            <div class="mb-3 text-md-start">
+                                <button type="submit" class="btn btn-light">BOOK NOW</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <%  }%>
             </div>
