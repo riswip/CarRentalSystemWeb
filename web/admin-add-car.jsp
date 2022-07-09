@@ -55,11 +55,11 @@
                 <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="process-add-car.jsp" method="POST">
                     <div class="col-md-6">
                         <label for="" class="form-label">Car Name</label>
-                        <input type="text" id="" name="carName" class="form-control col" size="60" required="">
+                        <input type="text" id="" name="carName" class="form-control col" value="${param.carName}" size="60" required="">
                     </div>
                     <div class="col-md-6">
                         <label for="" class="form-label">Brand</label>
-                        <input type="text" id="" name="brand" class="form-control" size="60" required="">
+                        <input type="text" id="" name="brand" class="form-control" value="${param.brand}" size="60" required="">
                     </div>
                     <div class="col-md-6">
                         <label for="" class="form-label">Transmission</label>
@@ -70,15 +70,15 @@
                     </div>
                     <div class="col-md-6">
                         <label for="" class="form-label">Plate</label>
-                        <input type="text" id="" name="plateNo" class="form-control" size="40" required="">
+                        <input type="text" id="" name="plateNo" class="form-control" value="${param.plateNo}" size="40" required="">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Rate/hour</label>
-                        <input type="text" id="" name="rate" class="form-control" maxlength="3" required="">
+                        <input type="text" id="" name="rate" class="form-control" value="${param.rate}" maxlength="3" required="">
                     </div>
                     <div class="col-md-6">
                         <label for="" class="form-label">No of Passenger</label>
-                        <input type="text" id="" name="passenger" class="form-control" size="60" required="">
+                        <input type="text" id="" name="passenger" class="form-control" value="${param.passenger}" size="60" required="">
                     </div>
                     <div class="col-md-6">
                         <label for="" class="form-label">Status</label>

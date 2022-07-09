@@ -59,6 +59,7 @@
                             <th>No</th>
                             <th>Car Name</th>
                             <th>Brand</th>
+                            <th>Plate</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -66,27 +67,38 @@
                     <%
                         int i = 1;
                         Car car = new Car();
-                        
+
                         String sqlCar = "SELECT * FROM car ORDER BY brand ASC";
                         Statement stmtCar = con.getConnection().createStatement();
                         ResultSet rsCar = stmtCar.executeQuery(sqlCar);
-                        
-                        while(rsCar.next()) {
+
+                        while (rsCar.next()) {
                     %>
                     <tbody>
                         <tr>
-                            <td><%= i++ %></td>
-                            <td><%= rsCar.getString(2) %></td>
-                            <td><%= rsCar.getString(3) %></td>
-                            <td><%= rsCar.getString(8) %></td>
+                            <td><%= i++%></td>
+                            <td><%= rsCar.getString(2)%></td>
+                            <td><%= rsCar.getString(3)%></td>
+                            <td><%= rsCar.getString(5)%></td>
+                            <td><%= rsCar.getString(8)%></td>
                             <td>
-                                <button class="btn btn-light" onclick="window.window.location.href=''"><span class="bi bi-pencil-square"></span></button>
-                                <button class="btn btn-danger" onclick="window.window.location.href=''"><span class="bi bi-x"></span></button>
+                                <button class="btn btn-light" onclick="window.location.href = ''"><span class="bi bi-pencil-square"></span></button>
+                                <a href="process-delete-car.jsp?plate=<%= rsCar.getString(5)%>">
+                                    <button class="btn btn-danger" onclick="return confirm('Confirm to delete?');"><span class="bi bi-x"></span></button>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
                     <%  }%>
                 </table>
+                <div class="message col-10 col-md-8 mx-auto text-center">
+                    <%
+                        String message = (String) request.getAttribute("message");
+                        if (message != null) {
+                    %>
+                    <%=  request.getAttribute("message")%>
+                    <%  }%>
+                </div>
             </div>
         </div>
 
