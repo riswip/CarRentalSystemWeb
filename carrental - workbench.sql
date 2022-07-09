@@ -45,7 +45,7 @@ carStatus varchar(50),
 createdDateTime datetime NOT NULL DEFAULT current_timestamp()
 );
 
-ALTER TABLE users AUTO_INCREMENT = 10000;
+ALTER TABLE car AUTO_INCREMENT = 10000;
 
 ---------- [ TABLE BOOKING ] ----------
 

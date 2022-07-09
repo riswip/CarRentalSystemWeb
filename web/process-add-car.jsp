@@ -20,12 +20,14 @@
             int result;
             DBConnection con = new DBConnection();
 
+            //CHECK EXISTING CAR PLATE AVOID DUPLICATE ENTRY
             String sqlCheck = "SELECT * FROM car WHERE plate='" + car.getPlateNo() + "'";
             Statement stmt = con.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sqlCheck);
 
             if (!rs.next()) {
-            
+                
+                //INSERT CAR RECORD WHEN THERE IS NO EXISTING CAR WITH SAME PLATE
                 String sql = "INSERT INTO car(carName, brand, transmission, plate, rateHour, passenger, carStatus) "
                         + "VALUES(?,?,?,?,?,?,?)";
                 PreparedStatement ps = con.getConnection().prepareStatement(sql);
