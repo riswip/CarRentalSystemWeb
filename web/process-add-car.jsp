@@ -4,6 +4,7 @@
     Author     : Asyraf
 --%>
 
+<%@page import="java.io.*"%>
 <%@page import="java.sql.*"%>
 <%@page import="com.util.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -26,7 +27,7 @@
             ResultSet rs = stmt.executeQuery(sqlCheck);
 
             if (!rs.next()) {
-                
+
                 //INSERT CAR RECORD WHEN THERE IS NO EXISTING CAR WITH SAME PLATE
                 String sql = "INSERT INTO car(carName, brand, transmission, plate, rateHour, passenger, carStatus) "
                         + "VALUES(?,?,?,?,?,?,?)";

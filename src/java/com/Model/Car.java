@@ -9,6 +9,7 @@ package com.Model;
  * @author Asyraf
  */
 public class Car {
+
     String carName;
     String brand;
     String transmission;
