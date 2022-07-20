@@ -12,7 +12,7 @@ INSERT INTO role(rolename, descs)
 VALUES	('Admin','Manage users, cars, booking details'),
 		('Customer','Create reservations for car');
 
----------- [ TABLE USER ] ----------
+---------- [ TABLE USERS ] ----------
 CREATE TABLE users (
 id int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 userName varchar(50),
@@ -42,7 +42,20 @@ plate varchar(50) UNIQUE,
 rateHour decimal(9,2),
 passenger int,
 carStatus varchar(50),
+image varchar(255),
+img_path varchar(255),
 createdDateTime datetime NOT NULL DEFAULT current_timestamp()
+);
+
+ALTER TABLE car AUTO_INCREMENT = 10000;
+
+---------- [ TABLE IMAGES ] ----------
+CREATE TABLE images (
+id int(5) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+image varchar(255),
+img_path varchar(255)
+-- carID int(5),
+-- CONSTRAINT FK_carID FOREIGN KEY (carID) REFERENCES car(id)
 );
 
 ALTER TABLE car AUTO_INCREMENT = 10000;

@@ -51,7 +51,15 @@ Author     : Aspire E 14
                     <p class="car-name"><%= rsCar.getString(3)%> - <%= rsCar.getString(2)%></p>
                     <div class="row">
                         <div class="col-12 col-md mb-3">
-                            <img src="images/default-image.png" alt="PERODUA MYVI" class="img-car img-thumbnail">
+                            <%
+                                String sqlImg = "SELECT image FROM images";
+                                Statement stmtImg = con.getConnection().createStatement();
+                                ResultSet rsImg = stmtImg.executeQuery(sqlImg);
+                                while(rsImg.next()) {
+                                    String fn = rsImg.getString(2);
+                            %>
+                            <img src="<%= fn %>" alt="PERODUA MYVI" class="img-car img-thumbnail">
+                            <%  }%>
                         </div>
                         <div class="col mt-md-4">
                             <div class="mb-3 text-start">

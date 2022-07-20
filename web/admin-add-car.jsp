@@ -52,7 +52,7 @@
         <div class="container-fluid">
             <div class="kotak col-md-5 mx-auto pt-4 pb-4 mt-5 mb-5">
                 <h1 class="mb-3 text-center">Add Car</h1>
-                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="process-add-car.jsp" method="POST">
+                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="uploadServlet" method="POST" enctype="multipart/form-data">
                     <div class="col-md-6">
                         <label for="" class="form-label">Car Name</label>
                         <input type="text" id="" name="carName" class="form-control col" value="${param.carName}" size="60" required="">
@@ -88,11 +88,16 @@
                             <option value="Under Maintenance">Under Maintenance</option>
                         </select>
                     </div>
-                    <div class="mt-3 mb-3 p-1 text-center">
-                        <button type="submit" class="btn btn-primary col-5 col-md-3">Submit</button>
-                        <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'admin-add-car.jsp'">Cancel</button>
-                    </div>
-                </form>
+                    
+                        <div class="col-md-6">
+                            <label for="" class="form-label">Upload car image</label>
+                            <input type="file" id="" name="file" class="form-control" required="">
+                        </div>
+                        <div class="mt-3 mb-3 p-1 text-center">
+                            <button type="submit" class="btn btn-primary col-5 col-md-3">Submit</button>
+                            <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'admin-add-car.jsp'">Cancel</button>
+                        </div>
+                    </form>
                 <div class="message col-10 col-md-8 mx-auto text-center">
                     <%
                         String message = (String) request.getAttribute("message");
