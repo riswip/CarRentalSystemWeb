@@ -95,8 +95,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `userName`, `userNickName`, `age`, `phoneNo`, `gender`, `email`, `pass`, `roleid`, `createdDatetime`) VALUES
-(10000, 'Admin', NULL, NULL, NULL, NULL, 'admin@mail.com', '1234', 1, '2022-07-09 18:58:49'),
-(10002, 'Asyraf Razali', 'Asyraf', 26, '12321312', 'Male', 'archwork28@gmail.com', '1234', 2, '2022-07-10 01:23:57');
+(10000, 'Admin', NULL, NULL, NULL, NULL, 'admin@mail.com', '1234', 1, '2022-07-09 18:58:49');
 
 --
 -- Indexes for dumped tables
