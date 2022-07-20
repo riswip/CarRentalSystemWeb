@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2022 at 05:52 PM
+-- Generation Time: Jul 20, 2022 at 06:21 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.3.28
 
@@ -36,6 +36,8 @@ CREATE TABLE `car` (
   `rateHour` decimal(9,2) DEFAULT NULL,
   `passenger` int(11) DEFAULT NULL,
   `carStatus` varchar(50) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `img_path` varchar(255) DEFAULT NULL,
   `createdDateTime` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -43,12 +45,11 @@ CREATE TABLE `car` (
 -- Dumping data for table `car`
 --
 
-INSERT INTO `car` (`id`, `carName`, `brand`, `transmission`, `plate`, `rateHour`, `passenger`, `carStatus`, `createdDateTime`) VALUES
-(1, 'Scirocco 1.4 TSI', 'Volkswagen', 'Automatic', 'UMT1010', '50.00', 4, 'Available', '2022-07-09 23:13:13'),
-(6, 'Myvi', 'Perodua', 'Automatic', 'ABC1234', '7.00', 4, 'Unavailable', '2022-07-09 23:47:20'),
-(7, 'Viva', 'Perodua', 'Automatic', 'BCD7890', '7.00', 5, 'Available', '2022-07-09 23:47:55'),
-(8, 'Axia', 'Perodua', 'Automatic', 'TBG8008', '7.00', 4, 'Under Maintenance', '2022-07-09 23:49:02'),
-(10000, 'Saga Iswara', 'Proton', 'Manual', 'W786C', '6.00', 5, 'Available', '2022-07-09 23:50:56');
+INSERT INTO `car` (`id`, `carName`, `brand`, `transmission`, `plate`, `rateHour`, `passenger`, `carStatus`, `image`, `img_path`, `createdDateTime`) VALUES
+(10002, 'Scirocco 1.4 TSI', 'Volkswagen', 'Automatic', 'TBT1043', '7.00', 4, 'Available', 'Scirocco.jpg', 'C:\\xampp\\htdocs\\Car-Rental1\\web\\images\\Scirocco.jpg', '2022-07-20 19:19:38'),
+(10008, 'Myvi', 'Perodua', 'Automatic', 'TBG8008', '7.00', 5, 'Available', 'myvi.jpg', 'C:\\xampp\\htdocs\\Car-Rental\\web\\images\\myvi.jpg', '2022-07-20 21:53:34'),
+(10009, 'Viva', 'Perodua', 'Automatic', 'ABC1234', '7.00', 5, 'Available', 'viva.jpeg', 'C:\\xampp\\htdocs\\Car-Rental\\web\\images\\viva.jpeg', '2022-07-20 21:53:47'),
+(10010, 'Axia', 'Perodua', 'Automatic', 'W786C', '7.00', 5, 'Available', 'axia.jpg', 'C:\\xampp\\htdocs\\Car-Rental\\web\\images\\axia.jpg', '2022-07-20 21:54:20');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `userName`, `userNickName`, `age`, `phoneNo`, `gender`, `email`, `pass`, `roleid`, `createdDatetime`) VALUES
-(10000, 'Admin', NULL, NULL, NULL, NULL, 'admin@mail.com', '1234', 1, '2022-07-09 18:58:49');
+(10000, 'Admin', NULL, NULL, NULL, NULL, 'admin@mail.com', '1234', 1, '2022-07-09 18:58:49'),
+(10002, 'Asyraf Razali', 'Asyraf', 26, '12321312', 'Male', 'archwork28@gmail.com', '1234', 2, '2022-07-10 01:23:57');
 
 --
 -- Indexes for dumped tables
@@ -129,7 +131,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `car`
 --
 ALTER TABLE `car`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10001;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10011;
 
 --
 -- AUTO_INCREMENT for table `role`
@@ -141,7 +143,7 @@ ALTER TABLE `role`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10003;
 
 --
 -- Constraints for dumped tables
