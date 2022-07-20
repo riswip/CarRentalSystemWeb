@@ -4,10 +4,9 @@
     Author     : Aspire E 14
 --%>
 
+<%@page import="java.sql.*"%>
 <%@page import="com.util.DBConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page language="java"%>
-<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
     <body>
