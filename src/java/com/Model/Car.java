@@ -10,6 +10,7 @@ package com.Model;
  */
 public class Car {
 
+    int id;
     String carName;
     String brand;
     String transmission;
@@ -17,6 +18,16 @@ public class Car {
     double rate;
     int passenger;
     String status;
+    String image;
+    String imagePath;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getCarName() {
         return carName;
@@ -72,5 +83,21 @@ public class Car {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 }

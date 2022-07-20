@@ -88,16 +88,15 @@
                             <option value="Under Maintenance">Under Maintenance</option>
                         </select>
                     </div>
-                    
-                        <div class="col-md-6">
-                            <label for="" class="form-label">Upload car image</label>
-                            <input type="file" id="" name="file" class="form-control" required="">
-                        </div>
-                        <div class="mt-3 mb-3 p-1 text-center">
-                            <button type="submit" class="btn btn-primary col-5 col-md-3">Submit</button>
-                            <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'admin-add-car.jsp'">Cancel</button>
-                        </div>
-                    </form>
+                    <div class="col-md-6">
+                        <label for="" class="form-label">Upload car image</label>
+                        <input type="file" id="" name="file" class="form-control" required="">
+                    </div>
+                    <div class="mt-3 mb-3 p-1 text-center">
+                        <button type="submit" class="btn btn-primary col-5 col-md-3">Submit</button>
+                        <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'admin-add-car.jsp'">Cancel</button>
+                    </div>
+                </form>
                 <div class="message col-10 col-md-8 mx-auto text-center">
                     <%
                         String message = (String) request.getAttribute("message");
