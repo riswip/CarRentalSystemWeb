@@ -51,7 +51,7 @@ Author     : Aspire E 14
                     <p class="car-name"><%= rsCar.getString(3)%> - <%= rsCar.getString(2)%></p>
                     <div class="row">
                         <div class="col-12 col-md mb-3">
-                            <img src="images/<%= rsCar.getString(9)%>" alt="PERODUA MYVI" class="img-car img-thumbnail">
+                            <img src="images/<%= rsCar.getString(9)%>" alt="" class="img-car img-thumbnail">
                         </div>
                         <div class="col">
                             <div class="mb-3 text-start">

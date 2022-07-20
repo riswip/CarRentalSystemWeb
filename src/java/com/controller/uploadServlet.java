@@ -42,7 +42,7 @@ public class uploadServlet extends HttpServlet {
 
         Part part = request.getPart("file");
         String fileName = extractFileName(part);
-        String savePath = "C:\\xampp\\htdocs\\Car-Rental1\\web\\images" + File.separator + fileName;
+        String savePath = "C:\\xampp\\htdocs\\Car-Rental\\web\\images" + File.separator + fileName;
         File fileSaveDir = new File(savePath);
 
         part.write(savePath + File.separator);

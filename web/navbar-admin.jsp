@@ -24,7 +24,7 @@
         <a class="nav-link" href="admin-add-car.jsp">Add Car</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="admin-view-car.jsp">View Cars</a>
+        <a class="nav-link" href="admin-view-car.jsp">Manage Cars</a>
     </li>
 </ul>
 <% if (userSession != null) {%>

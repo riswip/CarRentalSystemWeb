@@ -82,7 +82,7 @@
                             <td><%= rsCar.getString(5)%></td>
                             <td><%= rsCar.getString(8)%></td>
                             <td>
-                                <button class="btn btn-light" onclick="window.location.href = ''"><span class="bi bi-pencil-square"></span></button>
+                                <button class="btn btn-light" onclick="window.location.href = 'admin-update-car.jsp?id=<%= rsCar.getInt(1) %>'"><span class="bi bi-pencil-square"></span></button>
                                 <a href="process-delete-car.jsp?plate=<%= rsCar.getString(5)%>">
                                     <button class="btn btn-danger" onclick="return confirm('Confirm to delete?');"><span class="bi bi-x"></span></button>
                                 </a>
