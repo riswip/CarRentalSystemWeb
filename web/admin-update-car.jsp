@@ -52,7 +52,7 @@
         <div class="container-fluid">
             <div class="kotak col-md-5 mx-auto pt-4 pb-4 mt-5 mb-5">
                 <h1 class="mb-3 text-center">Update Car</h1>
-                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="uploadServlet" method="POST" enctype="multipart/form-data">
+                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="updateCarServlet" method="POST" enctype="multipart/form-data">
                     <%
                         int carID = Integer.parseInt(request.getParameter("id"));
                         String sql1 = "SELECT * FROM car WHERE id='" + carID + "'" ;
@@ -103,6 +103,7 @@
                         <input type="file" id="" name="file" class="form-control" required="">
                     </div>
                     <div class="mt-3 mb-3 p-1 text-center">
+                        <input type="hidden" name="id" value="<%= carID %>">
                         <button type="submit" class="btn btn-primary col-5 col-md-3">Submit</button>
                         <button type="reset" class="btn btn-light col-5 col-md-3" onclick="window.location.href = 'admin-view-car.jsp'">Cancel</button>
                     </div>

@@ -1,15 +1,18 @@
+package com.controller;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package com.controller;
 
 import com.Model.Car;
 import com.util.DBConnection;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -22,11 +25,11 @@ import javax.servlet.http.Part;
  *
  * @author Asyraf
  */
-@WebServlet("/uploadServlet")
+@WebServlet("/addCarServlet")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,
         maxFileSize = 1024 * 1024 * 10,
         maxRequestSize = 1024 * 1024 * 50)
-public class uploadServlet extends HttpServlet {
+public class addCarServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -90,7 +93,7 @@ public class uploadServlet extends HttpServlet {
             }
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            e.getMessage();
         }
     }
 
