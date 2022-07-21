@@ -24,7 +24,7 @@ import javax.servlet.http.Part;
  *
  * @author Asyraf
  */
-@WebServlet("/updateCarServlet")
+//@WebServlet("/updateCarServlet")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 2,
         maxFileSize = 1024 * 1024 * 10,
         maxRequestSize = 1024 * 1024 * 50)
