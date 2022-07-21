@@ -69,7 +69,7 @@ public class updateCarServlet extends HttpServlet {
             Statement stmt = con.getConnection().createStatement();
             ResultSet rs = stmt.executeQuery(sqlCheck);
 
-            if (!rs.next()) {
+            if (rs.next()) {
 
                 //INSERT CAR RECORD WHEN THERE IS NO EXISTING CAR WITH SAME PLATE
                 String sql = "UPDATE car SET carName=?, brand=?, transmission=?, plate=?, rateHour=?, passenger=?, carStatus=?, image=?, img_path=? "
@@ -86,14 +86,13 @@ public class updateCarServlet extends HttpServlet {
                 ps.setString(9, car.getImagePath());
                 ps.setInt(10, car.getId());
                 ps.executeUpdate();
-                
+
                 request.setAttribute("message", "<p class='alert alert-success'>Add car successfully</p>");
-                request.getRequestDispatcher("admin-add-car.jsp").forward(request, response);
+                request.getRequestDispatcher("admin-update-car.jsp").forward(request, response);
             } else {
                 request.setAttribute("message", "<p class='alert alert-danger'>Failed to update car! Plate No. " + car.getPlateNo() + ".</p>");
                 request.getRequestDispatcher("admin-update-car.jsp").forward(request, response);
             }
-
         } catch (Exception e) {
             e.getMessage();
         }

@@ -52,7 +52,7 @@
         <div class="container-fluid">
             <div class="kotak col-md-5 mx-auto pt-4 pb-4 mt-5 mb-5">
                 <h1 class="mb-3 text-center">Update Car</h1>
-                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="updateCarServlet" method="POST" enctype="multipart/form-data">
+                <form class="row g-3 pe-3 ps-4 pe-md-5 ps-md-5" action="updateCarServlet" method="POST" enctype="multipart/form-data" onsubmit="return confirm('Confirm update?');">
                     <%
                         int carID = Integer.parseInt(request.getParameter("id"));
                         String sql1 = "SELECT * FROM car WHERE id='" + carID + "'" ;
